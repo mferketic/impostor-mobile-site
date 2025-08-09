@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Impostor</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="first_part">
+        <div class="form-group">
+          <label>Presets:</label>
+          <div class="preset-buttons">
+            <button
+              class="preset-btn"
+              data-players="2"
+              data-impostors="1"
+              type="button"
+            >
+              2-1
+            </button>
+            <button
+              class="preset-btn"
+              data-players="3"
+              data-impostors="1"
+              type="button"
+            >
+              3-1
+            </button>
+            <button
+              class="preset-btn"
+              data-players="4"
+              data-impostors="1"
+              type="button"
+            >
+              4-1
+            </button>
+            <button
+              class="preset-btn"
+              data-players="4"
+              data-impostors="2"
+              type="button"
+            >
+              4-2
+            </button>
+            <button
+              class="preset-btn"
+              data-players="5"
+              data-impostors="2"
+              type="button"
+            >
+              5-2
+            </button>
+            <button
+              class="preset-btn"
+              data-players="6"
+              data-impostors="3"
+              type="button"
+            >
+              6-3
+            </button>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="num_players">Ukupan broj igraca: </label>
+          <input type="number" id="num_players" name="num_players" />
+        </div>
+        <div class="form-group">
+          <label for="num_impostors">Broj impostora: </label>
+          <input type="number" id="num_impostors" name="num_impostors" />
+        </div>
+        <div class="form-group">
+          <div class="categories-header">
+            <label>Kategorije: </label>
+            <button id="select_all_button" class="select-all-btn" type="button">
+              Označi sve
+            </button>
+          </div>
+          <div class="checkbox-group">
+            <input
+              type="checkbox"
+              id="cat_voce"
+              name="categories"
+              value="cat_voce"
+            />
+            <label for="cat_voce">Voce</label>
+          </div>
+          <div class="checkbox-group">
+            <input
+              type="checkbox"
+              id="cat_povrce"
+              name="categories"
+              value="cat_povrce"
+            />
+            <label for="cat_povrce">Povrce</label>
+          </div>
+          <div class="checkbox-group">
+            <input
+              type="checkbox"
+              id="cat_javnamesta"
+              name="categories"
+              value="cat_javnamesta"
+            />
+            <label for="cat_javnamesta">Javna mesta</label>
+          </div>
+          <div class="checkbox-group">
+            <input
+              type="checkbox"
+              id="cat_drzave"
+              name="categories"
+              value="cat_drzave"
+            />
+            <label for="cat_drzave">Drzave</label>
+          </div>
+          <div class="checkbox-group">
+            <input
+              type="checkbox"
+              id="cat_sportovi"
+              name="categories"
+              value="cat_sportovi"
+            />
+            <label for="cat_sportovi">Sportovi</label>
+          </div>
+          <div class="checkbox-group">
+            <input
+              type="checkbox"
+              id="cat_zivotinje"
+              name="categories"
+              value="cat_zivotinje"
+            />
+            <label for="cat_zivotinje">Zivotinje</label>
+          </div>
+          <div class="checkbox-group">
+            <input
+              type="checkbox"
+              id="cat_zanimanja"
+              name="categories"
+              value="cat_zanimanja"
+            />
+            <label for="cat_zanimanja">Zanimanja</label>
+          </div>
+          <div class="checkbox-group">
+            <input
+              type="checkbox"
+              id="cat_predmeti"
+              name="categories"
+              value="cat_predmeti"
+            />
+            <label for="cat_predmeti">Predmeti</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <button id="start_game_button" type="button">Pokreni igru</button>
+        </div>
+      </div>
+      <div class="form-group" id="last_form">
+        <label id="player_number">PlayerNumber</label>
+        <label id="word">Word</label>
+        <button id="dalje_button" type="button">Dalje</button>
+      </div>
+      <div class="form-group" id="game_end_form" style="display: none;">
+        <label>Igra je završena!</label>
+        <button id="refresh_button" type="button">Nova igra</button>
+      </div>
+    </div>
+    <script src="scripts.js"></script>
+    <script src="validatebutton.js"></script>
+  </body>
+</html>
