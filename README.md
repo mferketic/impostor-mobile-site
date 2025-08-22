@@ -1,5 +1,8 @@
 https://mferketic.com/impostor/
 
+22-Aug-25
+Version 1.2
+- Added trolling functionality
 
 09-Aug-25
 Version 1.1
