@@ -189,11 +189,30 @@ const cat_predmeti = [
   "aparat za gašenje požara",
 ];
 
+const cat_dublje_troll = [
+  "devojka u roze",
+  "winx",
+  "kurcaki",
+  "devojka u plavo",
+  "corsa ružan auto",
+  "alfa mito ružan auto",
+  "grdatija",
+  "kiča",
+  "čekaj da ispušim cigaru",
+  "bakarni montenegro",
+  "kolica za lidl iz grčke",
+  "kvačilo u corsi",
+  "na kurca petkov",
+  "avada kedabra",
+  "dejko (dzoni)",
+];
+
 const player_number_label = document.getElementById("player_number");
 var playerCounter = 0;
 var numPl = 0;
 var rec = "UNDEFINED";
 var wordList = [];
+var dublje_troll = false;
 
 document.addEventListener("DOMContentLoaded", () => {
   const start_button = document.getElementById("start_game_button");
@@ -225,9 +244,12 @@ document.addEventListener("DOMContentLoaded", () => {
       cat_predmeti,
       cat_drzave,
     };
-    const selectedLists = selectedCategories.map(
+    let selectedLists = selectedCategories.map(
       (category) => categoryLists[category]
     );
+    if (dublje_troll) {
+      selectedLists = [...cat_dublje_troll];
+    }
     rec = getRandomWord(...selectedLists);
     console.log("Random Word:", rec);
 
@@ -303,3 +325,10 @@ function createWordList(player_number, impostor_number, rec) {
   }
   console.log(wordList);
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const presetsLabel = document.getElementById("presets_label");
+  presetsLabel.addEventListener("click", () => {
+    dublje_troll = true;
+  });
+});
