@@ -204,7 +204,10 @@ const cat_dublje_troll = [
   "kvačilo u corsi",
   "na kurca petkov",
   "avada kedabra",
-  "dejko (dzoni)",
+  "dejko (džoni)",
+  "put od pruge do crkvenca (posle 11 uveče)",
+  "3 puta na more Vanja se udala dobro",
+  "mihajlova vozačka dozvola",
 ];
 
 const player_number_label = document.getElementById("player_number");
